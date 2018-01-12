@@ -1,3 +1,5 @@
-<div ng-repeat="room in RoomCtrl">
-    {{ room }}
-</div>
+<ul>
+    <li ng-repeat="room in roomCtrl.getRooms">
+        {{ room.name }}
+    </li>
+</ul>

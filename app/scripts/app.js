@@ -14,7 +14,7 @@
              })
              .state('room', {
                  url: '/room',
-                 controller: 'RoomCtrl as room',
+                 controller: 'RoomCtrl as roomCtrl',
                  templateUrl: '/templates/room.html'
              });
 
