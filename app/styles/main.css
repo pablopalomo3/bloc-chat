@@ -1,0 +1,34 @@
+body {
+    background-color: #efefef;
+    font-family: 'helvetica', sans-serif;
+}
+
+.sidebar {
+    background-color: #64babf;
+    color: #fff;
+    height: 100%;
+    position: absolute;
+    width: 450px;
+}
+
+.roombox {
+    position: absolute;
+    left: 10%;
+    top: 4%;
+}
+.title button {
+    position: absolute;
+    left: 250px;
+    top: 10px;
+}
+
+h1 {font-size: 2.5em;}
+
+li {list-style: none;}
+
+li a {
+    color: black;
+    display: block;
+    font-size: 20px;
+    text-decoration: none;
+}
