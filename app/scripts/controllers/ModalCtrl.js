@@ -2,10 +2,12 @@
     function ModalCtrl($uibModalInstance, Room) {
 
         this.newRoom = function(name) {
-            Room.newRoom(name);
+            console.log('add room');
+            Room.addRoom(name);
             $uibModalInstance.close();
         };
         this.cancel = function() {
+            console.log('cancel add');
             $uibModalInstance.dismiss();
         };
     }
