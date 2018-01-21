@@ -7,13 +7,10 @@
         vm.open = function() {
             console.log('open modal');
             var modalInstance = $uibModal.open({
-                animation: true,
+                animation: false,
                 templateUrl: '../templates/modal.html',
                 controller: 'ModalCtrl',
-                controllerAs: 'modal'
-            });
-            modalInstance.result.then(function(name) {
-                Room.addRoom(name);
+                controllerAs: 'modal',
             });
         };
 
