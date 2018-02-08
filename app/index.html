@@ -1,52 +1,62 @@
 <!DOCTYPE html>
 <html ng-app="blocChat">
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>Bloc Chat</title>
-    <link rel="stylesheet" href="/styles/normalize.css">
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-</head>
-<body>
-    <ui-view></ui-view>
+    <head lang="en">
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Bloc Chat</title>
+        <link rel="stylesheet" href="/styles/normalize.css">
+        <link rel="stylesheet" href="/styles/main.css">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body>
+        <ui-view></ui-view>
 
 
-    <!-- Angular -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <!-- Angular -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 
-    <!-- AngularUI Router -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+        <!-- AngularUI Router -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
 
-    <!-- AngularUI Bootstrap -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+        <!-- AngularUI Bootstrap -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
 
 
-    <!-- FireBase -->
-    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
-    <!-- AngularFire -->
-    <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+        <!-- FireBase -->
+        <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+        <!-- AngularFire -->
+        <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
 
-    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyBHl4aRxrQb4K0g0ziv2aRMIcyEFhO-JlA",
-        authDomain: "bloc-chat-3afdf.firebaseapp.com",
-        databaseURL: "https://bloc-chat-3afdf.firebaseio.com",
-        projectId: "bloc-chat-3afdf",
-        storageBucket: "bloc-chat-3afdf.appspot.com",
-        messagingSenderId: "518333983528"
-      };
-      firebase.initializeApp(config);
-    </script>
+        <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyBHl4aRxrQb4K0g0ziv2aRMIcyEFhO-JlA",
+            authDomain: "bloc-chat-3afdf.firebaseapp.com",
+            databaseURL: "https://bloc-chat-3afdf.firebaseio.com",
+            projectId: "bloc-chat-3afdf",
+            storageBucket: "bloc-chat-3afdf.appspot.com",
+            messagingSenderId: "518333983528"
+          };
+          firebase.initializeApp(config);
+        </script>
 
-     <!-- Application Files -->
-    <script src="/scripts/app.js"></script>
-    <!-- controllers -->
-    <script src="/scripts/controllers/HomeCtrl.js"></script>
-    <script src="/scripts/controllers/ModalCtrl.js"></script>
-    <!-- services -->
-    <script src="/scripts/services/Room.js"></script>
+         <!-- Application Files -->
+        <script src="/scripts/app.js"></script>
+        <!-- controllers -->
+        <script src="/scripts/controllers/HomeCtrl.js"></script>
+        <script src="/scripts/controllers/ModalCtrl.js"></script>
+        <!-- services -->
+        <script src="/scripts/services/Room.js"></script>
+        <script src="/scripts/services/Message.js"></script>
 
-</body>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    </body>
 </html>

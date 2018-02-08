@@ -1,11 +1,31 @@
-<div class="sidebar">
-    <div class="roombox">
-        <div class="title">
-            <h1>Bloc Chat</h1>
-            <button type="button" class="btn btn-default" ng-click="home.open()">Add Room</button>
+<div class="conatiner d-flex flex-row my-flex-container">
+    <div class="sidebar">
+        <div class="roombox">
+            <div class="title">
+                <h1>Bloc Chat</h1>
+                <button type="button" class="btn btn-default" ng-click="home.open()">Add Room</button>
+            </div>
+            <ul class="list-group">
+                <li ng-repeat="room in home.getRooms">
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-info" ng-click="home.getMessages()">{{ room.name }}</a>
+                </li>
+            </ul>
         </div>
-        <ul class="list-group">
-            <li><a href="#" class="list-group-item list-group-item-action list-group-item-info" ng-repeat="room in home.getRooms">{{ room.name }}</a></li>
-        </ul>
+    </div>
+    <div class="chatroom">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">{{ home.activeRoom }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="messages" ng-repeat="message in home.getMessages">
+              <td class="username"> {{ message.username}}
+                <p class="content"> {{ message.content}} </p>
+              </td>
+              <td class="time"> {{ message.sentAt}} </td>
+            </tr>
+        </table>
     </div>
 </div>

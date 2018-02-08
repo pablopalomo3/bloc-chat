@@ -1,5 +1,5 @@
 (function() {
-    function HomeCtrl($uibModal, Room) {
+    function HomeCtrl($uibModal, Room, Message) {
 
         this.getRooms = Room.all;
 
@@ -11,6 +11,11 @@
                 controller: 'ModalCtrl as modal'
             });
         };
+
+        this.getMessages = function(roomId, roomName) {
+            this.messages = Message.getByRoomId(roomId);
+            this.activeRoom = roomName;
+        }
 
     }
 

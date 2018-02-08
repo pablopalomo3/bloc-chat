@@ -2,24 +2,26 @@ body {
     background-color: #efefef;
     font-family: 'helvetica', sans-serif;
 }
-
+.container {
+    height: 100vh;
+}
 .sidebar {
+    height: 100vh;
     background-color: #64babf;
     color: #fff;
-    height: 100%;
-    position: absolute;
-    width: 450px;
+    min-width: 400px;
 }
 
 .roombox {
-    position: absolute;
+    position: relative;
     left: 10%;
     top: 4%;
+    width: 200px;
 }
 .title button {
-    position: absolute;
-    left: 250px;
-    top: 10px;
+    position: relative;
+    left: 220px;
+    top: -50px;
 }
 
 h1 {font-size: 2.5em;}
@@ -31,4 +33,20 @@ li a {
     display: block;
     font-size: 20px;
     text-decoration: none;
+}
+.chatroom {
+    height: 100vh;
+    width: 100%;
+    min-width: 500px;
+}
+.time {
+    font-style: italic;
+    color: #adadad;
+    width: 150px;
+}
+.username {
+    font-weight: bold;
+}
+.content {
+    font-weight: normal;
 }
