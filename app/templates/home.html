@@ -7,7 +7,7 @@
             </div>
             <ul class="list-group">
                 <li ng-repeat="room in home.getRooms">
-                    <a href="#" class="list-group-item list-group-item-action list-group-item-info" ng-click="home.getMessages()">{{ room.name }}</a>
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-info" ng-click="home.getMessages(room)">{{ room.name }}</a>
                 </li>
             </ul>
         </div>
@@ -20,7 +20,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr class="messages" ng-repeat="message in home.getMessages">
+            <tr class="messages" ng-repeat="message in home.messages">
               <td class="username"> {{ message.username}}
                 <p class="content"> {{ message.content}} </p>
               </td>
