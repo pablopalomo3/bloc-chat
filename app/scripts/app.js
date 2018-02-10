@@ -12,16 +12,10 @@
                  controller: 'HomeCtrl as home',
                  templateUrl: '/templates/home.html'
              });
-         $stateProvider
-             .state('modal', {
-                 url: '/',
-                 controller: 'ModalCtrl as modal',
-                 templateUrl: '/templates/ModalCtrl.html'
-             });
 
      }
 
      angular
-         .module('blocChat', ['ui.router', 'firebase', 'ui.bootstrap'])
+         .module('blocChat', ['ui.router', 'firebase', 'ui.bootstrap','ngCookies'])
          .config(config);
  })();

@@ -4,12 +4,10 @@
         this.roomName;
 
         this.submit = function(roomName) {
-            console.log('add room');
             Room.add({name: roomName});
             $uibModalInstance.close();
         };
         this.cancel = function() {
-            console.log('cancel add');
             $uibModalInstance.dismiss();
         };
     }

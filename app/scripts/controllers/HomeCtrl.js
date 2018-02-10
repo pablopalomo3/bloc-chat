@@ -4,7 +4,6 @@
         this.getRooms = Room.all;
 
         this.open = function() {
-            console.log('open modal');
             var modalInstance = $uibModal.open({
                 animation: false,
                 templateUrl: '../templates/modal.html',
