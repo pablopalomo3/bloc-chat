@@ -5,10 +5,10 @@
         </div>
         <div class="modal-body">
             <p>This name will appear when you send messages</p>
-            <input type="text" ng-model="username.name" placeholder="username" required>
+            <input type="text" placeholder="Username" ng-model="username.name" required>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" ng-click="username.addUser()">Set a username</button>
+          <button type="button" class="btn btn-primary" ng-click="username.addUser(username.name)">Set a username</button>
         </div>
     </div>
 </div>

@@ -4,6 +4,7 @@
             <div class="title">
                 <h1>Bloc Chat</h1>
                 <button type="button" class="btn btn-default" ng-click="home.open()">Add Room</button>
+                <h5>Hello {{ home.currentUser }}</h5>
             </div>
             <ul class="list-group">
                 <li ng-repeat="room in home.getRooms">

@@ -1,11 +1,17 @@
 (function() {
     function UsernameCtrl($uibModalInstance, $cookies) {
 
-        this.currentUser;
+        var currentUser;
 
-        this.addUser = function() {
-            $cookies.put('blocChatCurrentUser', this.name);
-            $uibModalInstance.close();
+        this.addUser = function(currentUser) {
+            if (currentUser === undefined) {
+                alert("Enter Username!");
+            } else if (currentUser.length >= 1){
+                $cookies.put('blocChatCurrentUser', currentUser);
+                console.log(currentUser);
+                $uibModalInstance.close();
+            }
+
         };
     }
 
