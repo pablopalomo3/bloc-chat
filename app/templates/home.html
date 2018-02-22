@@ -4,11 +4,11 @@
             <div class="title">
                 <h1>Bloc Chat</h1>
                 <button type="button" class="btn btn-default" ng-click="home.open()">Add Room</button>
-                <h5>Hello {{ home.currentUser }}</h5>
+                <h5>Hello {{ currentUser }}</h5>
             </div>
             <ul class="list-group">
                 <li ng-repeat="room in home.getRooms">
-                    <a href="#" class="list-group-item list-group-item-action list-group-item-info" ng-click="home.getMessages(room)">{{ room.name }}</a>
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-info" ng-click="home.getMessages(room);">{{ room.name }}</a>
                 </li>
             </ul>
         </div>
@@ -28,5 +28,21 @@
               <td class="time"> {{ message.sentAt}} </td>
             </tr>
         </table>
+        <div class="message-box">
+            <div class="input-group mb-3">
+              <input
+              type="text"
+              class="form-control"
+              placeholder="Write your message here..."
+              aria-describedby="basic-addon2"
+              ng-model="content">
+              <div class="input-group-append">
+                <button
+                class="btn btn-outline-secondary"
+                type="button"
+                ng-click="home.sendMessage(content);">Send Message</button>
+              </div>
+            </div>
+        </div>
     </div>
 </div>

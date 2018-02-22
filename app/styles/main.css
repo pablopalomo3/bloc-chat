@@ -50,3 +50,10 @@ li a {
 .content {
     font-weight: normal;
 }
+
+.message-box {
+    position: absolute;
+    top: 90vh;
+    right: 1%;
+    width: 77%;
+}
